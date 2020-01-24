@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nudge Widgets</title>
+    <link rel="stylesheet" href="/output/widget.css">
+  </head>
+  <body>
+    <div class="widget h-100">
+      <div class="absolute absolute--fill flex items-center justify-center">Loading Widget...</div>
+    </div>
+    <script>
+      var Nudge = window.Nudge || {
+        auth: {
+          accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4OCIsInVuaXF1ZV9uYW1lIjoiQ29sbGluU2F1dmUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL2FjY2Vzc2NvbnRyb2xzZXJ2aWNlLzIwMTAvMDcvY2xhaW1zL2lkZW50aXR5cHJvdmlkZXIiOiJBU1AuTkVUIElkZW50aXR5IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJhZGM0ZWNiZi1kZjc2LTRjMzgtYWI2NC00NWJiZGExOTc4ZGIiLCJ1cm46bnVkZ2U6YXV0aG9yaXphdGlvbi1zZXJ2ZXItdG9rZW4taWQiOiIxY2UwM2YwN2MzNGM0YjY2YTY0ZjUzNGY4YjA2NDAzNSIsInVybjpudWRnZTpzZWN1cml0eS1zdGFtcC1oYXNoIjoiNmp3cndSZzZRR1E4c21wYWFVRnFOSFZJaWJlZWVZanhNdXR6ajlwWmppUSIsInNjcCI6IltcImZ1bGxcIl0iLCJjaWQiOiJtb2JpbGVVSSIsImlhdCI6MTU0NDczNTAzMCwidXJuOm9hdXRoOmdyYW50LXR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJyb2xlIjpbIkFkbWluIiwiRW1wbG95ZWUiLCJOdWRnZVVzZXIiXSwibmJmIjoxNTQ0NzM1MDMwLCJleHAiOjE1NDQ3Mzg2MzAsImlzcyI6IlNlY3VyaXR5TWFuYWdlbWVudCIsImF1ZCI6Imh0dHA6Ly93d3cubnVkZ2UuY29tIn0.TxKei-FiUJgtISfOVozYXgUTupiPqftZ-mbhcoP1FcY"
+        },
+        urls: {
+          applicationServices: "https://api.nudge.ai",
+          applicationServicesCdn: "https://nudge.azureedge.net" || "https://api.nudge.ai",
+          securityManagement: "https://login.nudge.ai",
+          webApp: "https://app.nudge.ai"
+        },
+        environmentName: "prod",
+        version: "00000000-0000-0000-0000-000000000000"
+      };
+    </script>
+    <!--TODO: babel polyfill / fetch?-->
+    <script src="/output/polyfill-always.js"></script>
+    <script src="/output/runtime~widget.js"></script>
+    <script src="/output/vendor~widget.js"></script>
+    <script src="/output/widget.js"></script>
+  </body>
+</html>

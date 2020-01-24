@@ -1,0 +1,13 @@
+import { Result, Task } from "./Task";
+import { Lazy } from "../function";
+declare type SyncProducer<A> = Lazy<A>;
+declare type AsyncProducer<A> = Lazy<Promise<A>>;
+declare type ResultProducer<A> = Lazy<Result<A>>;
+declare type ValueProducer<A> = SyncProducer<A> | AsyncProducer<A> | ResultProducer<A>;
+declare type Value<A> = A | Result<A> | Promise<A>;
+declare type Producer<A> = Value<A> | ValueProducer<A>;
+export declare const valueToPromise: <A>(v: Value<A>) => Promise<A>;
+export declare const toLazyPromise: <A>(p: Producer<A>) => Lazy<Promise<A>>;
+export declare const toResult: <A>(p: Producer<A>) => Task<Error, A>;
+export declare const toCachedResult: <A>(p: Producer<A>) => Task<Error, A>;
+export default Producer;

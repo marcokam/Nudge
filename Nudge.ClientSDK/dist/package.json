@@ -1,0 +1,92 @@
+{
+  "name": "@nudge/client-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run pre-build && tsc && npm run post-build",
+    "build-dev": "npm run build",
+    "clean": "rimraf ./dist",
+    "lint": "eslint ./ --ext .ts --ext .tsx",
+    "post-build": "npm run tscpaths && npm run lint",
+    "pre-build": "npm run clean && mkdirp ./dist && cp ./package.json ./dist/",
+    "start": "npm run watch",
+    "test": "jest",
+    "test-with-coverage": "npm run test -- --coverage",
+    "test-watch": "jest --watch",
+    "tscpaths": "tscpaths -p tsconfig.json -s ./ -o ./dist",
+    "watch": "npm run pre-build && tsc-watch --onSuccess \"npm run post-build\""
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>\\testPolyfills.ts"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/**/*.{js,jsx,ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>\\node_modules\\",
+      "<rootDir>\\dist\\"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>\\node_modules\\",
+      "<rootDir>\\dist\\"
+    ],
+    "testMatch": [
+      "<rootDir>/**/*.test.{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^~(.*)$": "<rootDir>$1"
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>\\node_modules\\",
+      "<rootDir>\\dist\\"
+    ]
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.8.5",
+    "@types/jest": "^21.1.10",
+    "@types/lru-cache": "^5.1.0",
+    "@types/parse-link-header": "^1.0.0",
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/uuid": "^3.4.4",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "copyfiles": "^2.1.0",
+    "date-fns": "^1.30.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "jest": "^24.8.0",
+    "mkdirp": "^0.5.1",
+    "react-spring": "^8.0.27",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "tsc-watch": "^2.1.2",
+    "tscpaths": "0.0.9",
+    "typescript": "^3.6.3",
+    "whatwg-fetch": "^2.0.4",
+    "query-string": "^6.8.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6 <16.9.0",
+    "react-dom": ">=16.8.6 <16.9.0",
+    "react-router": "5.0.0",
+    "react-router-dom": "5.0.0",
+    "react-spring": "^8.0.27",
+    "chart.js": "^2.8.0",
+    "date-fns": "^1.30.1",
+    "lru-cache": "^5.1.1",
+    "query-string": "^6.8.1",
+    "uuid": "^3.3.2"
+  },
+  "dependencies": {
+    "parse-link-header": "^1.0.1"
+  }
+}

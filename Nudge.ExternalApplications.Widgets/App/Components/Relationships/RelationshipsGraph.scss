@@ -1,0 +1,29 @@
+$opacity-faded: 0.1;
+$stroke-opacity: 0.2;
+$stroke-highlight-opacity: 0.4;
+
+.relationships.sankey {
+    .paths {
+        path {
+            fill: none;
+            stroke: #000;
+            stroke-opacity: $stroke-opacity;
+    
+            &:hover {
+                stroke-opacity: $stroke-highlight-opacity;
+            }
+        }
+        .unselected {
+            transition: opacity .15s ease-in;
+            opacity: $opacity-faded;
+        }
+    }
+    .profile {
+        transition: opacity .15s ease-in;
+        pointer-events: bounding-box;
+
+        &.unselected {
+            opacity: $opacity-faded;
+        }
+    }
+}

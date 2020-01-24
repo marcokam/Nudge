@@ -1,0 +1,43 @@
+import { Monad1 } from "../Algebras/Monad";
+import { Monoid1 } from "../Algebras/Monoid";
+import { Applicative1, Applicative2 } from "../Algebras/Applicative";
+import { Predicate } from "../function";
+export declare const URI = "List";
+export declare type URI = typeof URI;
+declare type Return<A> = A extends (...args: any[]) => infer R ? R : never;
+export declare class List<A> {
+    readonly tag: "List";
+    private readonly value;
+    static of: <A_1>(...a: A_1[]) => List<A_1>;
+    static empty: <A_1>() => List<A_1>;
+    static fromArray: <A_1>(a: A_1[]) => List<A_1>;
+    constructor(a: A[]);
+    readonly map: <B>(f: (a: A) => B) => List<B>;
+    readonly ap: <B>(ListB: List<B>) => List<Return<A>>;
+    readonly chain: <B>(f: (a: A) => List<B>) => List<B>;
+    readonly filter: (p: (a: A) => boolean) => List<A>;
+    readonly concat: (listA: List<A>) => List<A>;
+    readonly fold: <B>(f: (acc: B, a: A) => B, seed: B) => B;
+    readonly traverse1: <F extends "Option" | "List" | "Pred" | "Compare", B>(F: Applicative1<F>, f: (a: A) => import("./URI2HKT").URI2HKT<B>[F]) => import("./URI2HKT").URI2HKT<List<B>>[F];
+    readonly traverse2: <F extends "Task" | "Either" | "Pair" | "Prism" | "Arrow", E, B>(F: Applicative2<F>, f: (a: A) => import("./URI2HKT").URI2HKT2<E, B>[F]) => import("./URI2HKT").URI2HKT2<E, List<B>>[F];
+    readonly toArray: () => A[];
+    readonly isEmpty: () => boolean;
+    readonly length: () => number;
+    readonly reverse: () => List<A>;
+    readonly groupBy: (f: (a: A) => string) => {
+        [k: string]: A[];
+    };
+    readonly uniq: () => List<A>;
+    readonly uniqBy: <B>(f: (a: A) => B) => List<A>;
+    readonly optHead: () => import("./Option").Some<NonNullable<A>> | import("./Option").None<NonNullable<A>>;
+    readonly optFind: (f: Predicate<A>) => import("./Option").Some<NonNullable<A>> | import("./Option").None<NonNullable<A>>;
+    readonly optLast: () => import("./Option").Some<false | NonNullable<A>> | import("./Option").None<false | NonNullable<A>>;
+}
+export declare const map: <A, B>(f: (a: A) => B) => (listA: List<A>) => List<B>;
+export declare const ap: <A, B>(listAtoB: List<(a: A) => B>) => (listA: List<A>) => List<B>;
+export declare const chain: <A, B>(f: (a: A) => List<B>) => (listA: List<A>) => List<B>;
+export declare const of: <A>(...a: A[]) => List<A>;
+export declare const concat: <A>(listA1: List<A>) => (listA2: List<A>) => List<A>;
+export declare const empty: <A>() => List<A>;
+export declare const list: Monad1<URI> & Monoid1<URI>;
+export {};

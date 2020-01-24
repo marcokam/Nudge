@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["@babel/env", {
+        "targets": {
+            "browsers": [
+              "last 2 versions",
+              "ie >= 10"
+            ]
+        },
+        "modules": false
+   }],
+    "@babel/react"
+  ],
+  "plugins": [
+    "lodash",
+    "@babel/syntax-dynamic-import",
+    "@babel/proposal-object-rest-spread",
+    "@babel/proposal-class-properties",
+    ["babel-plugin-transform-builtin-extend", {
+      "globals": ["Error", "Array"]
+    }]
+  ]
+}

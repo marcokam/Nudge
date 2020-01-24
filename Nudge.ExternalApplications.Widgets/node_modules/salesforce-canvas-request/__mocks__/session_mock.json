@@ -1,0 +1,95 @@
+{
+  "algorithm": "HMACSHA256",
+  "issuedAt": 1041106048,
+  "userId": "0056A000000wDazQAE",
+  "client": {
+    "refreshToken":
+      "some-refresh-token",
+    "instanceId": "_:CRA:",
+    "targetOrigin": "https://some-sfdc-org.my.salesforce.com",
+    "instanceUrl": "https://some-sfdc-org.my.salesforce.com",
+    "oauthToken":
+      "some-oauth-token"
+  },
+  "context": {
+    "user": {
+      "userId": "0056A000000wDazQAE",
+      "userName": "some-user@somecompany.org",
+      "firstName": "WebApp",
+      "lastName": "Baseline",
+      "email": "some-user@somecompany.org",
+      "fullName": "WebApp Baseline",
+      "locale": "en_US",
+      "language": "en_US",
+      "timeZone": "America/Los_Angeles",
+      "profileId": "00e6A000000El8I",
+      "roleId": null,
+      "userType": "STANDARD",
+      "currencyISOCode": "USD",
+      "profilePhotoUrl":
+        "https://some-org-content.force.com/profilephoto/005/F",
+      "profileThumbnailUrl":
+        "https://some-org-content.force.com/profilephoto/005/T",
+      "siteUrl": null,
+      "siteUrlPrefix": null,
+      "networkId": null,
+      "accessibilityModeEnabled": false,
+      "isDefaultNetwork": true
+    },
+    "links": {
+      "loginUrl": "https://some-sfdc-org.my.salesforce.com",
+      "enterpriseUrl": "/services/Soap/c/42.0/00D6A00000012O2",
+      "metadataUrl": "/services/Soap/m/42.0/00D6A00000012O2",
+      "partnerUrl": "/services/Soap/u/42.0/00D6A00000012O2",
+      "restUrl": "/services/data/v42.0/",
+      "sobjectUrl": "/services/data/v42.0/sobjects/",
+      "searchUrl": "/services/data/v42.0/search/",
+      "queryUrl": "/services/data/v42.0/query/",
+      "recentItemsUrl": "/services/data/v42.0/recent/",
+      "chatterFeedsUrl": "/services/data/v31.0/chatter/feeds",
+      "chatterGroupsUrl": "/services/data/v42.0/chatter/groups",
+      "chatterUsersUrl": "/services/data/v42.0/chatter/users",
+      "chatterFeedItemsUrl": "/services/data/v31.0/chatter/feed-items",
+      "userUrl": "/0056A000000wDazQAE"
+    },
+    "application": {
+      "name": "CRA",
+      "canvasUrl": "https://localhost:62005/salesforce/canvas",
+      "applicationId": "06P6A0000000UVl",
+      "version": "1.0",
+      "authType": "SIGNED_REQUEST",
+      "referenceId": "09H6A000000TrCS",
+      "options": [],
+      "samlInitiationMethod": "None",
+      "namespace": "",
+      "isInstalledPersonalApp": false,
+      "developerName": "CRA"
+    },
+    "environment": {
+      "referer": null,
+      "locationUrl":
+        "https://some-sfdc-org.my.salesforce.com/_ui/force/canvas/ui/CanvasPreviewerUi?retURL=%2Fsetup%2Fhome&appLayout=setup&tour=&isdtp=p1&sfdcIFrameOrigin=https://playful-moose-378804-dev-ed.lightning.force.com&nonce=d4351126879ac0efd0e61ce89f4d5766caf63ab775599c240ebb80c5d19f11ea&clc=1&sfdcIFrameHost=web&ltn_app_id=06m6A0000000xjTQAQ#",
+      "displayLocation": null,
+      "sublocation": null,
+      "uiTheme": "Theme3",
+      "dimensions": {
+        "width": "800px",
+        "height": "900px",
+        "maxWidth": "1000px",
+        "maxHeight": "2000px",
+        "clientWidth": "839px",
+        "clientHeight": "80px"
+      },
+      "parameters": {},
+      "record": {},
+      "version": { "season": "SPRING", "api": "42.0" }
+    },
+    "organization": {
+      "organizationId": "00D6A00000012O2UAI",
+      "name": "Appirio",
+      "multicurrencyEnabled": false,
+      "namespacePrefix": null,
+      "currencyIsoCode": "USD"
+    }
+  }
+}

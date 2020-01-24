@@ -1,0 +1,10 @@
+export declare function promiseTry<T>(fn: () => Promise<T>): Promise<T>;
+export declare function reusableSingleton<T>(fn: () => Promise<T>): () => Promise<T>;
+export declare function TimeoutPromise<T>(timeoutMs: number, resolveObject: T): Promise<T>;
+export declare const emptyPromise: Promise<null>;
+export declare const voidPromise: Promise<void>;
+export declare function RaceTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T | null>;
+export declare const createTimeoutAbortSignal: (timeoutMs: number) => AbortSignal;
+export declare const onSignalAbort: (signal: AbortSignal, fn: () => void) => void;
+export declare const joinAbortSignals: (...args: AbortSignal[]) => AbortSignal;
+export declare const mapAndJoinErrors: <T, U>(input: Iterable<T>, mapFn: (item: T) => Promise<U>) => Promise<U[]>;

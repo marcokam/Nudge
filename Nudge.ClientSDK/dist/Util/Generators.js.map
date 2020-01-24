@@ -1,0 +1,1 @@
+{"version":3,"file":"Generators.js","sourceRoot":"","sources":["../../Util/Generators.ts"],"names":[],"mappings":"","sourcesContent":["export type Generator<T> = Iterator<T>;\r\nexport type GeneratorProducer<T> = () => Generator<T>;"]}

@@ -1,0 +1,13 @@
+import { Pair } from "./Instances/Pair";
+export declare const keys: <A>(obj: A) => (keyof A)[];
+export declare const values: <A>(obj: A) => A[keyof A][];
+export declare const entries: <A>(obj: A) => [keyof A, A[keyof A]][];
+export declare const fromEntries: <A extends string | number | symbol, B>(entries: [A, B][]) => Record<A, B>;
+export declare const mapEntries: <A, B>(f: (k: string, v: A) => B) => (obj: Record<string, A>) => B[];
+export declare const map: <A, B>(f: (k: string, v: A) => B) => (obj: Record<string, A>) => Record<string, B>;
+export declare const reduce: <A, B>(f: (acc: B, kv: [string, A], i: number, arr: [string, A][]) => B, init: B) => (obj: Record<string, A>) => B;
+export declare const optProp: <A extends Record<string, any>, P extends Extract<keyof A, string>>(prop: P) => (a: A) => import("./Instances/Option").Some<NonNullable<A[P]>> | import("./Instances/Option").None<NonNullable<A[P]>>;
+export declare const propOr: <A extends Record<string, any>, B, P extends Extract<keyof A, string>>(prop: P, defaultValue: B) => (a: A) => any;
+export declare const pick: <A extends Record<string, any>>(props: string[]) => (a: A) => {};
+export declare const toPairs: <A>(a: Record<string, A>) => Pair<string, A>[];
+export declare const fromPairs: <A>(ps: Pair<string, A>[]) => Record<string, A>;

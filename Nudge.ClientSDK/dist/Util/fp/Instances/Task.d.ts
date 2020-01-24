@@ -1,0 +1,31 @@
+import { Lazy } from "../function";
+import { Monad2 } from "../Algebras/Monad";
+import { Either } from "./Either";
+import { Option } from "./Option";
+import Producer from "./Producer";
+export declare const URI = "Task";
+export declare type URI = typeof URI;
+declare type Return<A> = A extends (...args: any[]) => infer R ? R : never;
+export declare type Result<T> = Task<Error, T>;
+export declare class Task<E, A> {
+    readonly tag: "Task";
+    static ofValue: <A_1>(a: A_1) => Task<never, A_1>;
+    static of: <E_1, A_1>(a: A_1 | Promise<A_1>) => Task<E_1, A_1>;
+    static fromProducer: <A_1>(p: Producer<A_1>) => Task<Error, A_1>;
+    static fromEither: <E_1, A_1>(either: Either<E_1, A_1>) => Task<unknown, A_1>;
+    static fromOption: <E_1, A_1>(option: Option<A_1>, defaultValue: A_1) => Task<unknown, A_1 | NonNullable<A_1>>;
+    static reject: <E_1, A_1>(e: string) => Task<E_1, A_1>;
+    static toPromise: <E_1 extends Error, A_1>(t: Task<E_1, A_1>) => Promise<A_1>;
+    readonly run: Lazy<Promise<Either<E, A>>>;
+    constructor(run: Lazy<Promise<A>>);
+    readonly map: <B>(f: (a: A) => B) => Task<E, B>;
+    readonly ap: <B>(Tb: Task<E, B>) => Task<E, Return<A>>;
+    readonly chain: <B>(f: (a: A) => Task<E, B>) => Task<E, B>;
+    readonly fork: <E2, A2>(onError: (e: E) => E2, onSuccess: (a: A) => A2) => Promise<E2 | A2>;
+}
+export declare const map: <E, A, B>(f: (a: A) => B) => (taskA: Task<E, A>) => Task<E, B>;
+export declare const ap: <E, A, B>(taskAtoB: Task<E, (a: A) => B>) => (taskA: Task<E, A>) => Task<E, B>;
+export declare const chain: <E, A, B>(f: (a: A) => Task<E, B>) => (taskA: Task<E, A>) => Task<E, B>;
+export declare const of: <E, A>(a: A | Promise<A>) => Task<E, A>;
+export declare const task: Monad2<URI>;
+export {};

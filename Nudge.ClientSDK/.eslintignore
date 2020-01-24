@@ -1,0 +1,5 @@
+dist/*
+// Ignoring these because they throw errors.
+// Not sure if eslint/typescript-eslint is intended to run over typedef files.
+typings/**/*.d.ts
+testPolyfills.ts

@@ -1,0 +1,1 @@
+{"version":3,"file":"SdkLogCategories.js","sourceRoot":"","sources":["../../../Logging/Category/SdkLogCategories.ts"],"names":[],"mappings":"AAAA,eAAe;IACX,UAAU,EAAE,UAAU;CACzB,CAAC","sourcesContent":["export default {\r\n    \"ConfigUI\": \"ConfigUI\"\r\n};"]}

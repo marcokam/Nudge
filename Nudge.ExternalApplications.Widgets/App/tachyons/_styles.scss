@@ -1,0 +1,70 @@
+
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+
+/*
+
+  STYLES
+
+  Add custom styles here.
+
+*/
+@import "./_variables.scss";
+
+/* Nudge custom variables */
+$nudge-blue: #1a9bfc !default;
+$nudge-secondary-blue: #5eb9fc !default;
+$nudge-light-blue: #e8f5ff !default;
+$nudge-dark-blue: #003b4f !default;
+$nudge-green: #4fab5c !default;
+$nudge-action-green: #0bbd2b !default;
+$nudge-highlight-text: #EC8500 !default;
+$nudge-highlight-background: #FDF2E4 !default;
+$width-4-5: 12rem !default;
+$nudge-lightest-red: lighten($washed-red, 4%);
+
+/* Nudge custom skins */
+.bg-nudge-blue { background-color: $nudge-blue; }
+.hover-bg-nudge-blue:hover { background-color: darken($nudge-blue, 10%); }
+.nudge-blue { color: $nudge-blue; }
+.hover-nudge-blue:hover, .hover-nudge-blue:focus { color: $nudge-blue; }
+.b--nudge-blue {   border-color: $nudge-blue; }
+
+.bg-nudge-secondary-blue { background-color: $nudge-secondary-blue; }
+.nudge-secondary-blue { color: $nudge-secondary-blue; }
+.b--nudge-secondary-blue {   border-color: $nudge-secondary-blue; }
+
+.bg-nudge-light-blue { background-color: $nudge-light-blue; }
+.nudge-light-blue { color: $nudge-light-blue; }
+.b--nudge-light-blue { border-color: $nudge-light-blue; }
+.hover-bg-nudge-light-blue:hover,
+.hover-bg-nudge-light-blue:focus { background-color: $nudge-light-blue; }
+
+.bg-nudge-dark-blue { background-color: $nudge-dark-blue; }
+.nudge-dark-blue { color: $nudge-dark-blue; }
+.b--nudge-dark-blue { border-color: $nudge-dark-blue; }
+.hover-bg-nudge-dark-blue:hover { background-color: lighten($nudge-dark-blue, 5%); }
+
+.bg-nudge-green { background-color: $nudge-green; }
+.nudge-green { color: $nudge-green; }
+.b--nudge-green {   border-color: $nudge-green; }
+
+.bg-nudge-action-green { background-color: $nudge-action-green; }
+.nudge-action-green { color: $nudge-action-green; }
+.b--nudge-action-green {   border-color: $nudge-action-green; }
+
+.bg-nudge-lightest-red { background-color: $nudge-lightest-red; }
+
+.nudge-highlight-text { color: $nudge-highlight-text };
+.bg-nudge-highlight-background { background-color: $nudge-highlight-background };
+
+.pre { white-space: pre };
+.pre-line { white-space: pre-line; }
+.no-user-select { user-select: none; }
+.sticky { position: sticky; position: -webkit-sticky; }
+.w4-5 { width: $width-4-5; }
+.hover-underline:hover { text-decoration: underline; }
+.hover-bold:hover { font-weight: bold }

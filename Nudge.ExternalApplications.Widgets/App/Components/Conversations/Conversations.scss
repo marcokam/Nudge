@@ -1,0 +1,31 @@
+@import "~/App/tachyons/_variables.scss";
+@import "~/App/tachyons/_styles.scss";
+
+.conversations {
+    // Heatmap overrides
+    .react-calendar-heatmap {
+        
+        rect {
+            fill: $light-gray;
+            fill-opacity: 0.5;
+
+            &.evenMonth {
+                fill: $moon-gray;
+            }
+            &.one-conversation {
+                fill: $nudge-light-blue;
+            }
+            &.more-conversations {
+                fill: $nudge-blue;
+            }
+            &:hover {
+                fill: $nudge-green;
+                stroke-width: 0;
+            }
+        }
+        text {
+            font-size: 6px;
+            fill: $black-80;
+        }
+    }
+}

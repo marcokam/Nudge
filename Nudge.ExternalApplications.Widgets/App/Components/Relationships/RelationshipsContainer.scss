@@ -1,0 +1,30 @@
+@import "~/App/tachyons/_variables.scss";
+@import "~/App/tachyons/_styles.scss";
+
+.relationships {
+    .checkbox {
+        input[type=checkbox]:checked {
+            & + label:before {
+                color: #fff;
+                background-color: $nudge-blue;
+                font-size: inherit;
+                padding-left: 4px;
+            }
+        }
+        label {
+            &:before {
+                content: "✓";
+                height: 20px;
+                width: 20px;
+                border: 1px solid $moon-gray;
+                border-radius: 4px;
+                background-color: $white;
+                cursor: pointer;
+                box-sizing: border-box;
+                display: block;
+                font-size: 0;
+                margin-right: 5px;
+            }
+        }
+    }
+}

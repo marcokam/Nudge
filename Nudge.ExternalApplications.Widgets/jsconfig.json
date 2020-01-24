@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "./*"
+            ]
+        },
+        "jsx": "react"
+    },
+    "exclude": [
+        ".tmp",
+        ".vscode",
+        "output",
+        "node_modules"
+    ]
+}

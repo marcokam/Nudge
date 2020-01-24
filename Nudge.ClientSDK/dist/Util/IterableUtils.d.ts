@@ -1,0 +1,13 @@
+import { Comparer } from "../Comparison/ComparisonInterfaces";
+export declare function filter<T>(iterable: Iterable<T>, predicate: ((x: T) => boolean)): IterableIterator<T>;
+export declare function any<T>(iterable: Iterable<T>, predicate?: ((x: T) => boolean)): boolean;
+export declare function map<T, U>(iterable: Iterable<T>, mapper: (item: T) => U): IterableIterator<U>;
+export declare function reduce<T, U>(iterable: Iterable<T>, aggregator: (acc: U, item: T) => U, start: U): U;
+export declare function first<T>(iterable: Iterable<T>): T | null;
+export declare function flatMap<T, U>(iterable: Iterable<T>, mapper: (item: T) => Iterable<U>): Iterable<U>;
+export declare function uniqBy<T, K>(iterable: Iterable<T>, keyFn: (item: T) => K): Iterable<T>;
+export declare function reverse<T>(iterable: Iterable<T>): Iterable<T>;
+export declare function range(start: number, end: number, step?: number): Iterable<number>;
+export declare function min<T>(iterable: Iterable<T>, comparer?: Comparer<T>): T | undefined;
+export declare function max<T>(iterable: Iterable<T>, comparer?: Comparer<T>): T | undefined;
+export declare function forEach<T>(iterable: Iterable<T>, callback: (item: T) => void): void;

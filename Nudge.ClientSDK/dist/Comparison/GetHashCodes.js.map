@@ -1,0 +1,1 @@
+{"version":3,"file":"GetHashCodes.js","sourceRoot":"","sources":["../../Comparison/GetHashCodes.ts"],"names":[],"mappings":"AAAA,oDAAoD;AACpD,MAAM,CAAC,IAAM,UAAU,GAAG,cAAc,OAAA,CAAC,EAAD,CAAC,CAAC","sourcesContent":["// GetHashCode implementation that always returns 0.\r\nexport const zeroHasher = (): number => 0;\r\n"]}

@@ -1,0 +1,55 @@
+@import "~/App/tachyons/_variables.scss";
+@import "~/App/tachyons/_type-scale.scss";
+@import "~/App/tachyons/_font-style.scss";
+@import "~/App/tachyons/_font-weight.scss";
+@import "~/App/tachyons/_text-align.scss";
+@import "~/App/tachyons/_flexbox.scss";
+@import "~/App/tachyons/_spacing.scss";
+@import "~/App/tachyons/_line-height.scss";
+@import "~/App/tachyons/_vertical-align.scss";
+@import "~/App/tachyons/_borders.scss";
+@import "~/App/tachyons/_border-radius.scss";
+@import "~/App/tachyons/_border-colors.scss";
+@import "~/App/tachyons/_border-style.scss";
+@import "~/App/tachyons/_border-widths.scss";
+@import "~/App/tachyons/_widths.scss";
+@import "~/App/tachyons/_heights.scss";
+@import "~/App/tachyons/_max-widths.scss";
+@import "~/App/tachyons/_links.scss";
+@import "~/App/tachyons/_skins.scss";
+@import "~/App/tachyons/_skins-pseudo.scss";
+@import "~/App/tachyons/_display.scss";
+@import "~/App/tachyons/_position.scss";
+@import "~/App/tachyons/_coordinates.scss";
+@import "~/App/tachyons/_word-break.scss";
+@import "~/App/tachyons/_box-sizing.scss";
+@import "~/App/tachyons/_typography.scss";
+@import "~/App/tachyons/_white-space.scss";
+@import "~/App/tachyons/_hovers.scss";
+@import "~/App/tachyons/_z-index.scss";
+@import "~/App/tachyons/_lists.scss";
+@import "~/App/tachyons/_box-shadow.scss";
+@import "~/App/tachyons/_outlines.scss";
+@import "~/App/tachyons/_overflow.scss";
+@import "~/App/tachyons/_opacity.scss";
+@import "~/App/tachyons/_tables.scss";
+@import "~/App/tachyons/_text-decoration.scss";
+
+/* Our own modules */
+@import "~/App/tachyons/_styles.scss";
+
+html, body, .widget {
+    @extend .ma0, .black-80, .h-100;
+}
+
+*:focus {
+    outline: none;
+}
+
+body,
+button,
+select,
+input,
+textarea{
+	font-family: "system-ui", Arial, Helvetica, sans-serif;
+}
